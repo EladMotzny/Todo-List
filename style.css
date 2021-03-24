@@ -59,15 +59,15 @@ form button:hover{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    transition: all 1s ease;
+    transition: all 0.5s ease; /* add some delay for the animation */
 }
 
-.todo-item{/* js li */
+.todo li{/* js li */
     flex: 1;
     padding: 0rem 0.5rem;
 }
 
-.check-btn, .delete-btn{
+.trash-btn, .complete-btn{
     color: white;
     border: none;
     padding: 1rem;
@@ -75,16 +75,20 @@ form button:hover{
     font-size: 1rem;
 }
 
-.check-btn {
+.complete-btn {
     background: rgb(2, 177, 2);
 }
 
 
-.delete-btn {
+.trash-btn {
     background: rgb(163, 36, 36);
 }
 
-.fa-trash-alt, .fa-check{ /* disable clicking on the icon */
+.todo-item{
+    padding: 0rem 0.5rem;
+}
+
+.fa-trash, .fa-check{ /* disable clicking on the icon */
     pointer-events: none;
 }
 
@@ -96,4 +100,39 @@ form button:hover{
 .fall{
     transform: translateY(8rem) rotateZ(20deg);
     opacity: 0;
+}
+
+select{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    outline: none;
+    border: none;
+
+    color: #ff6f4f;/*change to another color according to the pallete */
+    width: 10rem;
+    cursor: pointer;
+    padding: 1rem;
+}
+
+.select{
+    margin: 1rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.select::after{
+    content: "\25BC";/*Adds the arrow to the box*/
+    position: absolute;
+    background: #ff6f4f;
+    top: 0;
+    right: 0;
+    padding: 1rem;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+
+.select:hover::after{
+    background: white;
+    color: #ff6f4f;
 }
