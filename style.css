@@ -109,7 +109,7 @@ select{
     outline: none;
     border: none;
 
-    color: #ff6f4f;/*change to another color according to the pallete */
+    color: #B83B5E;/*change to another color according to the pallete */
     width: 10rem;
     cursor: pointer;
     padding: 1rem;
@@ -124,7 +124,7 @@ select{
 .select::after{
     content: "\25BC";/*Adds the arrow to the box*/
     position: absolute;
-    background: #ff6f4f;
+    background: #B83B5E;
     top: 0;
     right: 0;
     padding: 1rem;
@@ -134,5 +134,5 @@ select{
 
 .select:hover::after{
     background: white;
-    color: #ff6f4f;
+    color: #B83B5E;
 }

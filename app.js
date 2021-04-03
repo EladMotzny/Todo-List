@@ -57,23 +57,27 @@ function deleteCheck(e){
 function filterTodo(e){
     const todos = todoList.childNodes;
     console.log(todos);
-    const todoArr = Array.from(todos);
-    console.log(todoArr);
-    todoArr.slice(1);
-    console.log(todoArr.slice(1));
-    todoArr.forEach(console.log(todoArr.classList.value));
-    /*todos.forEach(function(todo){
+    todos.forEach(function(todo){
         switch(e.target.value){
             case "all":
                 todo.style.display = 'flex';
                 break;
             case "completed":
-                if(todo.classList.contains('completed')){
+                if(todo.classList.contains('checked')){
                     todo.style.display = 'flex';
                 }
                 else{
                     todo.style.display = 'none';
                 }
+                break;
+            case "uncompleted":
+                if(todo.classList.contains('checked')){
+                    todo.style.display = 'none';
+                }
+                else{
+                    todo.style.display = 'flex';
+                }
+                break;
         }
-    });*/
+    });
 }
